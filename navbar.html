@@ -1,0 +1,35 @@
+<div class="topnav" id="myTopnav">
+  <h2>The Human Body Project</h2>
+  <nav>
+    <a href="/subpages/introduction.html">Introduction</a>
+    <a href="anatomy.html">Anatomy</a>
+    <a href="physiology.html">Physiology</a>
+    <a href="embryology.html">Embryology</a>
+    <a href="pathology.html">Pathology</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+</div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (!x) {
+      console.error("Element with id 'myTopnav' not found.")
+      return;
+    }
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  var link = document.createElement("link");
+  link.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.addEventListener('error', function (event) {
+    console.error("Error loading font-awesome. Please check the link.")
+  });
+  document.getElementsByTagName("head")[0].appendChild(link);
+</script>
